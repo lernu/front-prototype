@@ -1,0 +1,106 @@
+/* Color palette */
+
+:root {
+	--primal: #3f87ff;
+  --wrong: #ff504d;
+	--right: #00c94c;
+  --silver: #cfd8dc;
+	--black-70: rgba(0, 0, 0, 0.7);
+	--black-87: rgba(0, 0, 0, 0.87);
+}
+
+/* Text styles */
+
+.lead-text {
+	font-size: 24px;
+}
+
+.lead-secondary-text {
+	font-size: 24px;
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.general-text {
+}
+
+.general-secondary-text {
+	color: rgba(0, 0, 0, 0.54);
+}
+
+/* Common */
+
+body {
+  background: #f4f6f8;
+  font-family: Roboto;
+	color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+}
+
+.main-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+}
+
+p {
+  margin: 0;
+}
+
+/* Buttons */
+
+.btn {
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12),
+              0 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn-default {
+  background: #fff;
+  color: rgba(0, 0, 0, .56);
+}
+
+.btn-wrong {
+  background: var(--wrong);
+  color: #fff;
+}
+
+.btn-right {
+  background: var(--right);
+  color: #fff;
+}
+
+.btn-primal {
+  background: var(--primal);
+  color: #fff;
+}
+
+.btn-disabled {
+  background: var(--silver);
+  color: #fff;
+  box-shadow: none;
+}

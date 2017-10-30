@@ -1,0 +1,77 @@
+.main-header {
+  background: #fff;
+  height: 50px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12),
+              0 4px 4px rgba(0, 0, 0, 0.24);
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 50px;
+  padding: 0 16px;
+}
+
+.materials {
+}
+
+.materials .level {
+  position: relative;
+  margin: 32px 0;
+}
+
+.materials .level .level-label {
+  font-size: 14px;
+  color: rgba(0, 0, 0, .38);
+  position: absolute;
+  left: 16px;
+  top: 0;
+}
+
+.materials .level .block-list {
+  margin-left: 50px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 16px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12),
+              0 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+.materials .level .block-list .block:first-child a {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.materials .level .block-list .block:last-child a {
+  border-bottom: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.materials .level .block-list .block a {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+	color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  background: #fff;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  position: relative;
+}
+
+.materials .level .block-list .block a:hover {
+  background: rgba(255, 255, 255, .6);
+}
+
+.materials .level .block-list .block.test .test-statistic {
+  font-size: 12px;
+  line-height: 48px;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  height: 48px;
+  text-align: right;
+  color: rgba(0, 0, 0, .38);
+}
