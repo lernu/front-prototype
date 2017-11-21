@@ -18,7 +18,9 @@ function changeTextByClass(className, text) {
   el.textContent = text;
 }
 
-function setProgress(percents) {
+function setProgress(testIndex) {
+  let percents = ((testIndex + 1) / data.length) * 100;
+  console.log(percents);
   let progress = getElementByClass('progress');
   progress.className = "progress p" + percents;
 }

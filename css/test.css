@@ -1,8 +1,69 @@
 .result {
-  font-size: 80px;
+  font-size: 50px;
   text-align: center;
   font-weight: bold;
-  color: var(--right);
+  background: #24CE64;
+  width: 200px;
+  position: relative;
+  height: 200px;
+  border-radius: 50%;
+  border: 50px solid #49D47E;
+  margin: 0 auto;
+  color: #fff;
+  line-height: 200px;
+}
+
+.result:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  bottom: -100px;
+  left: -100px;
+  border-radius: 50%;
+  z-index: -1;
+  background: #7ADDA1;
+  border: 50px solid #AFE8C7;
+
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-name: best-result;
+  animation-iteration-count: infinite;
+}
+
+.result:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  bottom: -200px;
+  left: -200px;
+  border-radius: 50%;
+  z-index: -2;
+  background: #DBF0E6;
+  border: 50px solid #ECF4F2;
+
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-name: best-result;
+  animation-iteration-count: infinite;
+}
+
+@keyframes best-result {
+
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 
 /* progress */
@@ -43,11 +104,13 @@
 
 .progress-box .progress.p10:before { width: 10%; }
 .progress-box .progress.p20:before { width: 20%; }
+.progress-box .progress.p25:before { width: 25%; }
 .progress-box .progress.p30:before { width: 30%; }
 .progress-box .progress.p40:before { width: 40%; }
 .progress-box .progress.p50:before { width: 50%; }
 .progress-box .progress.p60:before { width: 60%; }
 .progress-box .progress.p70:before { width: 70%; }
+.progress-box .progress.p75:before { width: 75%; }
 .progress-box .progress.p80:before { width: 80%; }
 .progress-box .progress.p90:before { width: 90%; }
 .progress-box .progress.p100:before{ width: 100%; }
@@ -59,6 +122,20 @@
   position: absolute;
   top: 0;
   right: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.progress-box .close-test-btn:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
 }
 
 .progress-box .close-test-btn svg {
@@ -90,6 +167,8 @@
   vertical-align: middle;
   max-width: 600px;
   text-align: left;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 

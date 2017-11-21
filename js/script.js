@@ -1,6 +1,14 @@
 let testIndex = 0;
 let score = 0;
 
+function startOver() {
+  testIndex = 0;
+  score = 0;
+  setProgress(-1);
+  createTest(testIndex);
+  answerTest(testIndex);
+}
+
 function createTest(testIndex) {
   changeTextByClass('condition', data[testIndex].condition);
   changeTextByClass('explanation', data[testIndex].explanation);
@@ -30,7 +38,8 @@ function optionsChangeAfterAnswer(rightAnswers, answerIndex) {
   reloadCollectionByClass('option');
   let options = getCollectionByClass('option');
 
-  setProgress(((testIndex + 1) / data.length) * 100);
+  setProgress(testIndex);
+  console.log(testIndex);
 
   if (rightAnswers[answerIndex])
     getElementByClass('btn').className = "btn btn-right";
@@ -64,14 +73,18 @@ answerTest(testIndex);
 
 getElementByClass('btn').onclick = function() {
   if (testIndex > (data.length - 2)) {
-    deleteChildren(getElementByClass("content-box"));
+    deleteChildren(getElementByClass("centered-block"));
     let result = document.createElement("div");
     result.className = "result";
     result.textContent = score + "/" + data.length;
-    getElementByClass('content-box').appendChild(result);
+    getElementByClass('centered-block').appendChild(result);
   } else {
     testIndex++;
     createTest(testIndex);
     answerTest(testIndex);
   }
+}
+
+getElementByClass('close-test-btn').onclick = function() {
+  startOver();
 }
