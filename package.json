@@ -1,0 +1,23 @@
+{
+  "name": "lernu",
+  "version": "0.1.0",
+  "private": true,
+  "bugs": "https://github.com/lernu/front-prototype/issues",
+  "repository": {
+    "url": "https://github.com/lernu/front-prototype",
+    "type": "git"
+  },
+  "dependencies": {
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
