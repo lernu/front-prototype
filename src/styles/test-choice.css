@@ -1,0 +1,49 @@
+
+
+/* Test choice */
+
+.condition {
+  font-size: 24px;
+}
+
+.explanation {
+  font-size: 16px;
+  color: rgba(0, 0, 0, .54);
+}
+
+.condition + .options-list {
+  margin-top: 32px;
+}
+
+.condition + .option {
+  margin-top: 32px;
+}
+
+.condition + .explanation {
+  margin-top: 8px;
+}
+
+.explanation + .options-list {
+  margin-top: 32px;
+}
+
+.explanation + .option {
+  margin-top: 32px;
+}
+
+
+.options-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.options-list .option {
+  flex-grow: 1;
+  margin-right: 16px;
+  margin-top: 0;
+}
+
+.options-list .option:last-child {
+  margin-right: 0;
+}

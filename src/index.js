@@ -1,9 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import registerServiceWorker from './registerServiceWorker'
 import configureStore from './store/configureStore'
 import Root from './containers/Root'
+
+import './styles/normalize.css'
+import './styles/common.css'
+import './styles/test.css'
+import './styles/test-choice.css'
 
 const store = configureStore()
 

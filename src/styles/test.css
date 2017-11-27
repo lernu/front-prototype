@@ -1,0 +1,247 @@
+.result {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  background: #24CE64;
+  width: 200px;
+  position: relative;
+  height: 200px;
+  border-radius: 50%;
+  border: 50px solid #49D47E;
+  margin: 0 auto;
+  color: #fff;
+  line-height: 200px;
+}
+
+.result:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  bottom: -100px;
+  left: -100px;
+  border-radius: 50%;
+  z-index: -1;
+  background: #7ADDA1;
+  border: 50px solid #AFE8C7;
+
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-name: best-result;
+  animation-iteration-count: infinite;
+}
+
+.result:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  bottom: -200px;
+  left: -200px;
+  border-radius: 50%;
+  z-index: -2;
+  background: #DBF0E6;
+  border: 50px solid #ECF4F2;
+
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-name: best-result;
+  animation-iteration-count: infinite;
+}
+
+@keyframes best-result {
+
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* progress */
+
+.progress-box {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 100%;
+  right: 0;
+  margin: auto;
+  max-width: 632px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.progress-box .progress {
+  height: 2px;
+  border-radius: 1px;
+  flex-grow: 1;
+  margin: 6px 0;
+  margin-right: 27px;
+  background: #CFD8DC;
+  position: relative;
+}
+
+.progress-box .progress:before {
+  content: "";
+  height: 10px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: -4px;
+  border-radius: 5px;
+  display: block;
+  background: var(--right);
+}
+
+.progress-box .progress.p10:before { width: 10%; }
+.progress-box .progress.p20:before { width: 20%; }
+.progress-box .progress.p25:before { width: 25%; }
+.progress-box .progress.p30:before { width: 30%; }
+.progress-box .progress.p40:before { width: 40%; }
+.progress-box .progress.p50:before { width: 50%; }
+.progress-box .progress.p60:before { width: 60%; }
+.progress-box .progress.p70:before { width: 70%; }
+.progress-box .progress.p75:before { width: 75%; }
+.progress-box .progress.p80:before { width: 80%; }
+.progress-box .progress.p90:before { width: 90%; }
+.progress-box .progress.p100:before{ width: 100%; }
+
+.progress-box .close-test-btn {
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.progress-box .close-test-btn:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+}
+
+.progress-box .close-test-btn svg {
+  width: 100%;
+}
+
+/* test */
+
+.content-box {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  bottom: 80px;
+  left: 0;
+  font-size: 0;
+  text-align: center;
+}
+
+.content-box:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.content-box > .centered-block {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  max-width: 600px;
+  text-align: left;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+
+/* Button box */
+
+.button-box {
+  padding: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.button-box > .wrapper {
+  width: 100%;
+}
+
+.button-box .btn {
+  margin: auto;
+}
+
+/* Option */
+
+.option {
+  text-decoration: none;
+  height: 48px;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 4px;
+  display: block;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.option-right {
+  background: var(--right);
+  color: #fff;
+}
+
+.option-wrong {
+  background: var(--wrong);
+  color: #fff;
+}
+
+.option-clickable {
+  color: rgba(0, 0, 0, .87);
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12),
+              0 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+.option-default {
+  color: rgba(0, 0, 0, .87);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-sizing: border-box;
+  line-height: 46px;
+}
+
+.option-was-right {
+  color: var(--right);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-sizing: border-box;
+  line-height: 46px;
+}
+
+.option-was-wrong {
+  color: var(--wrong);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-sizing: border-box;
+  line-height: 46px;
+}
