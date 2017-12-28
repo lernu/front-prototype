@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import { routerReducer as routing } from 'react-router-redux'
 import { RESET_ERROR_MESSAGE } from '../constants/action-types'
+import lessons from './lessons'
 //import russian from './russian'
 
 // Updates error message to notify about the failed fetches.
@@ -17,7 +18,7 @@ const errorMessage = (state = null, action) => {
 }
 
 const rootReducer = combineReducers({
-//  russian,
+  lessons,
   errorMessage,
   routing
 })
